@@ -1,0 +1,22 @@
+
+   InvalidArgumentException 
+
+  Database connection [] not configured.
+
+  at vendor\laravel\framework\src\Illuminate\Database\DatabaseManager.php:196
+    192▕         // If the configuration doesn't exist, we'll throw an exception and bail.
+    193▕         $connections = $this->app['config']['database.connections'];
+    194▕ 
+    195▕         if (is_null($config = Arr::get($connections, $name))) {
+  ➜ 196▕             throw new InvalidArgumentException("Database connection [{$name}] not configured.");
+    197▕         }
+    198▕ 
+    199▕         return (new ConfigurationUrlParser)
+    200▕                     ->parseConfiguration($config);
+
+  1   vendor\laravel\framework\src\Illuminate\Database\DatabaseManager.php:159
+      Illuminate\Database\DatabaseManager::configuration("")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\DatabaseManager.php:101
+      Illuminate\Database\DatabaseManager::makeConnection("")
+
