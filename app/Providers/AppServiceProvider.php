@@ -8,7 +8,7 @@ use App\Http\ViewComposers\CustomerComposer;
 
 use App\Http\ViewComposers\LanguageComposer;
 
-
+use App\Http\ViewComposers\WidgetComposer;
 use App\Models\Language;
 class AppServiceProvider extends ServiceProvider
 {
@@ -78,6 +78,8 @@ class AppServiceProvider extends ServiceProvider
                 MenuComposer::class,
                 LanguageComposer::class,
                 CustomerComposer::class,
+                WidgetComposer::class,
+
             ];
             foreach($composerClasses as $key => $val){
                 $composer = app()->make($val,['language'=> $language->id]);

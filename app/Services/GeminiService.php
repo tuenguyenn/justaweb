@@ -33,11 +33,11 @@ class GeminiService
       
         $products = $this->productRepository->getAllProducts()->toArray();
 
-        // $keywords = explode(' ', strtolower(string: $message));
+        $keywords = strtolower(string: $message);
         $matchedProduct = null;
         foreach ($products as $product) {
             // foreach ($keywords as $keyword) {
-                if (strpos($product['name'], $message) !== false) {
+                if (strpos(strtolower($product['name']), $keywords) !== false) {
                     $matchedProduct = $product;
                     break;
                    

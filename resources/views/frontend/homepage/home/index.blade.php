@@ -3,6 +3,7 @@
 
         <div id="homepage" class="homepage">
             @include('frontend.component.slide')
+            @include('frontend.component.banner')
             <div class="panel-category page-setup">
                 <div class="uk-container uk-container-center">
                     @if (!is_null($widgets['cate-2']))
@@ -45,7 +46,26 @@
                     
                 </div>
             </div>
-            @include('frontend.component.banner')
+            <div class="panel-deal page-setup">
+                <div class="uk-container uk-container-center">
+                    <div class="panel-head">
+                        <div class="uk-flex uk-flex-middle uk-flex-space-between">
+                            <h2 class="heading-1"><span>FLASH SALE</span></h2>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="uk-grid uk-grid-medium">
+                            <?php for($i = 0; $i<=3; $i++){  ?>
+                            <div class="uk-width-large-1-4">
+                                @include('frontend.component.product-item-2')
+
+                            </div>
+                            <?php }  ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
         
             @if (isset($widgets['cate-home']))
             @foreach ($widgets['cate-home']->objects as $category)
@@ -161,31 +181,13 @@
                 </div>
             </div>
             @endif
-            <div class="panel-deal page-setup">
-                <div class="uk-container uk-container-center">
-                    <div class="panel-head">
-                        <div class="uk-flex uk-flex-middle uk-flex-space-between">
-                            <h2 class="heading-1"><span>Giảm giá trong ngày</span></h2>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="uk-grid uk-grid-medium">
-                            <?php for($i = 0; $i<=3; $i++){  ?>
-                            <div class="uk-width-large-1-4">
-                                @include('frontend.component.product-item-2')
-
-                            </div>
-                            <?php }  ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="uk-container uk-container-center">
+           
+            <div class="uk-container uk-container-center mt50">
                 <div class="panel-group">
                     <div class="panel-body">
                         <div class="group-title">Stay home & get your daily <br> needs from our shop</div>
                         <div class="group-description">Start Your Daily Shopping with Nest Mart</div>
-                        <span class="image img-scaledowm"><img src="frontend/resources/img/banner-9-min.png" alt=""></span>
+                        <span class="image"><img src="{{asset('userfiles/footer.png')}}" style="height:400px" alt=""></span>
                     </div>
                 </div>
             </div>

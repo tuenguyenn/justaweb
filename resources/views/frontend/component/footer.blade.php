@@ -4,8 +4,8 @@
             <div class="uk-grid uk-grid-medium">
                 <div class="uk-width-large-1-5">
                     <div class="footer-contact">
-                        <a href="" class="image img-scaledown"><img src="https://themepanthers.com/wp/nest/d1/wp-content/uploads/2022/02/logo.png" alt=""></a>
-                        <div class="footer-slogan">Awesome grocery store website template</div>
+                        <a href="" class="image img-scaledown"><img src="{{asset('userfiles/logo.png')}}" alt=""></a>
+                        <div class="footer-slogan"></div>
                         <div class="company-address">
                             <div class="address">{{__('frontend.address')}}</div>
                             <div class="phone">{{__('frontend.hotline')}} </div>
@@ -82,7 +82,7 @@
                             <div class="worktime">{{__('frontend.workhour')}}</div>
                         </div>
                         <div class="phone-item">
-                            <div class="p">Support: 0965 763 389</div>
+                            <div class="p">Support:0828427851</div>
                             <div class="worktime"></div>
                         </div>
                     </div>

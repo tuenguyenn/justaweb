@@ -1,6 +1,6 @@
 (function($) {
 	"use strict";
-	var HT = {}; // Khai báo là 1 đối tượng
+	var HT = {}; // Khai bĂ¡o lĂ  1 Ä‘á»‘i tÆ°á»£ng
 	var timer;
     var filter = $('.filtering')
 
@@ -113,4 +113,3 @@
 	});
 
 })(jQuery);
-

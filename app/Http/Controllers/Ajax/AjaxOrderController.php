@@ -46,6 +46,15 @@ class AjaxOrderController extends Controller
         ]);
 
     }
+      public function getRevenueChart(Request $request)
+    {
+        $range = $request->input('type', '7days');
+        
+        $data = $this->orderService->getRevenueChartData($range);
+    
+        return response()->json($data);
+    }
+    
   
 
     

@@ -51,18 +51,15 @@
                 <div class="uk-flex uk-flex-middle">
                     <div class="logo">
                         <a href="" class="logo-image">
-                            <img src="https://themepanthers.com/wp/nest/d1/wp-content/uploads/2022/02/logo.png" alt="">
+                            <img src="{{asset('userfiles/logo.png')}}" alt="">
                         </a>
                     </div>
-                    <div class="header-form">
-                        <form action="" class="uk-form form search-form">
-                            <div class="form-row">
-                                <input type="text" name="" class="input-text" placeholder="Tìm kiếm sản phẩm...">
-                            </div>
-                            <button type="submit" name="search" value="submit">Search</button>
-                        </form>
-                    </div>
+                    @include('frontend.component.search')
                 </div>
+              
+              
+            
+               
                 <div class="middle-widget">
                     <div class="uk-flex uk-flex-middle">
                         <a href="" class="become-vendor">Trở thành đại lý <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
@@ -191,44 +188,7 @@
             </div>
         </div>
     </div>
-    <div class="header-lower">
-        <div class="uk-container uk-container-center">
-            <div class="uk-flex uk-flex-middle">
-                <div class="categories">
-                    <span>Danh mục sản phẩm</span>
-                    <div class="categories-dropdown">
-                        <div class="uk-grid uk-grid-small">
-                            
-                            {{-- @if (!is_null($widgets['category']))
-                            @foreach ($widgets['category']->objects as $key => $val)
-                            @php
-                            $name = $val->languages->first()->pivot->name;
-                            $canonical = write_url($val->languages->first()->pivot->canonical);
-                            $image =  $val->image;
-                             @endphp
-                            @if ($key <8)
-                            <div class="uk-width-large-1-2 mb10">
-                              
-                                <div class="categories-item">
-                                    <a href="" title="" class="uk-flex uk-flex-middle">
-                                        <img src="{{$image}}" alt="">
-                                        <span class="title">{{$name}}</span>
-                                        <span class="total">{{$val->products_count}}</span>
-                                    </a>
-                                </div>
-                             
-                            </div>
-                            @endif
-                            @endforeach
-                               
-                            @endif --}}
-                           
-                        </div>
-                    </div>
-                </div>
-                @include('frontend.component.navigation')
-
-            </div>
-        </div>
-    </div>
+    @if (isset($enableMenu))
+     @include('frontend.component.menu')
+    @endif
 </div>

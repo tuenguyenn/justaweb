@@ -293,6 +293,7 @@ class CartService implements CartServiceInterface
        
         $payload = $request->except('_token','create','voucher');
         $payload['code'] = time();
+        $payload['total_amount'] = $cartTotal-$payload['discount'];
         $payload['cart']['cartTotal'] = $cartTotal;
         $payload['cart']['detail'] = $cart;
         $payload['promotion']['discount'] = $payload['discount'];

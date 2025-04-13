@@ -37,12 +37,13 @@ class HomeController extends FrontendController
             'best-seller' => ['keyword' => 'best-seller','options' => ['promotion' => true]],
             'cate-home' => ['keyword' => 'cate-home','options' => ['children' => true, 'object' => true, 'countObject' => true,'promotion' => true]],
         ], $this->language);
-      
+        $enableMenu = true;
         $seo = (__('frontend.seo'));
         return view('frontend.homepage.home.index',compact(
             'config',
             'slides',
             'widgets',
+            'enableMenu',
             
 
             

@@ -668,7 +668,8 @@
     }
     
     TN.fillProductList=(objects)=>{
-      
+        console.log(objects);
+        
         let productHtml = '';
         if(objects.data.length){
             let model = $('.select-product-and-quantity').val() 

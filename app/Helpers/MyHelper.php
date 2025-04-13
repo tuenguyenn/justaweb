@@ -319,3 +319,17 @@ function getDeliveryClass($status) {
     };
 }
 
+function caculateGrowth($current ,$previous){
+    $growth = 0;
+
+    if ($previous > 0) {
+        $growth = (($current - $previous) / $previous) * 100;
+    } elseif ($previous == 0 && $current > 0) {
+        $growth = 100; // hoặc bạn có thể cho là 999% nếu muốn thể hiện "tăng mạnh"
+    } else {
+        $growth = 0; // cả hai đều bằng 0 => không thay đổi
+    }
+    
+    return round($growth, 2); // làm tròn đến 2 chữ số thập phân
+    
+}

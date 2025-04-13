@@ -55,7 +55,7 @@ class AttributeService extends BaseService implements AttributeServiceInterface
                 ['attribute_language as tb2', 'tb2.attribute_id', '=', 'attributes.id'],
                 ['attribute_catalogue_attribute as tb3','attributes.id','=','tb3.attribute_id']
             ],
-            ['path' => 'attribute.index' ,'groupBy'=>$this->panigateSelect()],
+            ['path' => 'attribute/index' ,'groupBy'=>$this->panigateSelect()],
             $perpage,
             ['attribute_catalogues'],
             ['attributes.id', 'desc'],

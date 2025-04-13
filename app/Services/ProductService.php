@@ -124,12 +124,10 @@ class ProductService extends BaseService implements ProductServiceInterface
 
 
     public function create($request,$languageId)
-
     {
         return $this->handleTransaction(function () use ($request, $languageId) {
            
             $payload = $this->preparePayload($request);
-         
 
             $product = $this->productRepository->create($payload);
             if ($product->id) {
@@ -139,7 +137,7 @@ class ProductService extends BaseService implements ProductServiceInterface
                if($request->input('attribute')){
                     $this->createVariant($request, $product,$languageId);
                };
-               $this->productCatalogueService->setAttribute($product);
+               $this->productCatalogueService->setAttribute($product,);
             }
             return true;
         });

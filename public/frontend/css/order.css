@@ -316,8 +316,8 @@ background-color: #fff;
       width: 40px;
   }
     :root {
-        --primary-color: #27548A;
-        --primary-hover: #0f7ae5;
+      
+       
         --success-color: #3F7D58;
         --warning-color: #FFA725;
         --danger-color: #7D0A0A;

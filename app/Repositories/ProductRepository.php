@@ -68,7 +68,7 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
             
             'products.image',
             'tb2.name',
-        
+            'tb2.canonical',
             'tb3.id as product_variant_id',
             'tb3.uuid',
             DB::raw('CONCAT(tb2.name,"-",COALESCE(tb4.name,"default")) as variant_name'),

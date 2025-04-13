@@ -67,7 +67,9 @@ class CustomerRepository extends BaseRepository implements CustomerRepositoryInt
         return $query->get();
     }
     
-  
+  public function getAllCustomer(){
+    return $this->model->count();
+  }
    
 
 

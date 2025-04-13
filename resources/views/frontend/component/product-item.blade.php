@@ -72,10 +72,10 @@
             <div class="uk-flex uk-flex-middle uk-flex-space-between">
                 <div class="price uk-flex uk-flex-bottom">
                     @if ($discountPrice !=0)
-                        <div class="price-sale">{{ number_format($priceAfterDiscount) }}đ</div>
+                        <div class="price-sale ">{{ number_format($priceAfterDiscount) }}đ</div>
 
                     @endif
-                    <div class="{{( $discountPrice !=0) ? 'price-old': 'price-sale'}} ">{{ number_format($price) }}đ</div>
+                    <div class=" {{( $discountPrice !=0) ? 'price-old': 'price-sale'}} ">{{ number_format($price) }}đ</div>
                 </div>
                 <div class="addcart">
                     <a href="{{$canonical}}"   class="btn-addCart">

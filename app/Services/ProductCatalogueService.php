@@ -232,7 +232,7 @@ class ProductCatalogueService extends BaseService implements ProductCatalogueSer
         die("Error: " . $e->getMessage() . "<br>File: " . $e->getFile() . "<br>Line: " . $e->getLine());
     }
 }
-    public function setAttribute($product ,$oldProductCatalogue){{
+    public function setAttribute($product){{
        
         $attr = ($product->attribute) ??  [];
       

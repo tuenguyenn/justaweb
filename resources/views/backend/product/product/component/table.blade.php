@@ -29,7 +29,7 @@
                     
                             <div class="product-info ms-2" >
                                 <div class="meta-title text-dark">
-                                    <h5>{{$product->meta_title}}</h5>
+                                    <h5>{{$product->name}}</h5>
                                 </div>
                                     <div class="categories">
                                         <span class="text-danger">Danh mục:</span>
